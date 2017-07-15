@@ -6,11 +6,18 @@ class Atmosphere:
 
     def __init__(self, data, units):
         self.isImperialUnits = util.isImperialUnits(units)
-        self.humidity = data['humidity']
-        self.pressure = data['pressure']
+        self.humidity = int(data['humidity'])
+        self.pressure = float(data['pressure'])
         self.rising = data['rising']
 
         if self.isImperialUnits:
             self.__transformToMetric()
         else:
             self.metricPressure = self.pressure
+
+    def getString(self):
+        return "\tatmosphere:\n\t\thumidity:\t%d\n\t\tpressure:\t%.1f\n\t\trising:\t%s\n"
+
+    def __transformToMetric(self):
+        self.metricPressure = util.InTohPa(self.pressure)
+        self.metricPressure = self.pressure
