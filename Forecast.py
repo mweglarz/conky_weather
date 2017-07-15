@@ -27,11 +27,11 @@ class ForecastDay:
 class Forecast:
 
     def __init__(self, data, units):
-        data0 = data[0]
-        data1 = data[1]
-        data2 = data[2]
-        data3 = data[3]
-        data4 = data[4]
+        data0 = data[1]
+        data1 = data[2]
+        data2 = data[3]
+        data3 = data[4]
+        data4 = data[5]
 
         self.day0 = ForecastDay(data0, units, 0)
         self.day1 = ForecastDay(data1, units, 1)

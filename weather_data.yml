@@ -14,32 +14,32 @@ weather:
   text: Mostly Cloudy
  forecast:
   day0:
-   code: 47
-   day: Sat
-   low: 23
-   high: 33
-   text: Scattered Thunderstorms
-  day1:
    code: 30
    day: Sun
    low: 25
    high: 30
    text: Partly Cloudy
-  day2:
+  day1:
    code: 28
    day: Mon
    low: 25
    high: 30
    text: Mostly Cloudy
-  day3:
+  day2:
    code: 30
    day: Tue
    low: 24
    high: 31
    text: Partly Cloudy
-  day4:
+  day3:
    code: 30
    day: Wed
+   low: 25
+   high: 30
+   text: Partly Cloudy
+  day4:
+   code: 30
+   day: Thu
    low: 25
    high: 30
    text: Partly Cloudy
