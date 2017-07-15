@@ -1,4 +1,5 @@
 weather:
+ city: Krakow
  wind:
   chill: 27
   direction: 295

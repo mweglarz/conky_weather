@@ -20,7 +20,7 @@ class Weather:
         baseurl = "https://query.yahooapis.com/v1/public/yql?"
         # woeid = 502075
         woeid = self.woeid
-        yql_query = "select item, wind, atmosphere, units from weather.forecast where woeid=%d" % woeid
+        yql_query = "select item, wind, atmosphere, units, location from weather.forecast where woeid=%d" % woeid
         yql_url = baseurl + urllib.parse.urlencode({'q':yql_query}) + "&format=json"
         print("request = %s" % yql_url)
         print()
@@ -33,6 +33,9 @@ class Weather:
         channel = data['query']['results']['channel']
         item = channel['item']
         units = channel['units']
+
+        location = channel['location']
+        city = location['city']
 
         wind = channel['wind']
         windString = self.__transformWind(wind, units)
@@ -50,10 +53,10 @@ class Weather:
         forecastString = self.__transformForecast(forecast, units)
         # print(forecastString)
 
-        self.__saveToFile(windString, atmosphereString, conditionString, forecastString)
+        self.__saveToFile(windString, atmosphereString, conditionString, forecastString, city)
 
-    def __saveToFile(self, wind, atmosphere, condition, forecast):
-        string = "weather:\n" + wind + atmosphere + condition + forecast
+    def __saveToFile(self, wind, atmosphere, condition, forecast, city):
+        string = "weather:\n city: " + city + "\n" + wind + atmosphere + condition + forecast
         with open("weather_data.yml", "w") as weatherFile:
             weatherFile.write(string)
 
