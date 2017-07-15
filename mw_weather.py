@@ -7,6 +7,7 @@ from sys import argv
 from Wind import Wind
 from Atmosphere import Atmosphere
 from Condition import Condition
+from Forecast import Forecast
 
 # print(data['query']['results'])
 
@@ -45,7 +46,7 @@ class Weather:
         conditionString = self.__transformCondition(condition, units)
         print(conditionString)
 
-        forecast = item['forecast']
+        forecast = channel['forecast']
         forecastString = self.__transformForecast(forecast, units)
 
     def __transformWind(self, wind, units):
@@ -61,7 +62,8 @@ class Weather:
         return condition.getString()
 
     def __transformForecast(self, forecast, units):
-        return ""
+        forecast = Forecast(forecast, units)
+        return forecast.getString()
 
 
 if __name__ == '__main__':

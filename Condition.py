@@ -8,7 +8,7 @@ class Condition:
         self.isImperialUnits = util.isImperialUnits(units)
         self.code = data['code']
         self.temp = int(data['temp'])
-        if util.isImperialUnits():
+        if util.isImperialUnits(units):
             self.metricTemp = util.FtoC(self.temp)
         else:
             self.metricTemp = self.temp
