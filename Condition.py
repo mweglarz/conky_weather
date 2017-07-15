@@ -15,4 +15,4 @@ class Condition:
         self.text = data['text']
 
     def getString(self):
-        return "\tcondition:\n\t\tcode:\t%s\n\t\ttemp:\t%d\n\t\ttext:\t%s\n" % (self.code, self.metricTemp, self.text)
+        return " condition:\n  code: %s\n  temp: %d\n  text: %s\n" % (self.code, self.metricTemp, self.text)

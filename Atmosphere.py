@@ -16,7 +16,7 @@ class Atmosphere:
             self.metricPressure = self.pressure
 
     def getString(self):
-        return "\tatmosphere:\n\t\thumidity:\t%d\n\t\tpressure:\t%.1f\n\t\trising:\t%s\n"
+        return " atmosphere:\n  humidity: %d\n  pressure: %.1f\n  rising: %s\n" % (self.humidity, self.metricPressure, self.rising)
 
     def __transformToMetric(self):
         self.metricPressure = util.InTohPa(self.pressure)

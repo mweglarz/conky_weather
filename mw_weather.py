@@ -36,18 +36,26 @@ class Weather:
 
         wind = channel['wind']
         windString = self.__transformWind(wind, units)
-        print(windString)
+        # print(windString)
 
         atmosphere = channel['atmosphere']
         atmosphereString = self.__transformAthmosphere(atmosphere, units)
-        print(atmosphereString)
+        # print(atmosphereString)
 
         condition = item['condition']
         conditionString = self.__transformCondition(condition, units)
-        print(conditionString)
+        # print(conditionString)
 
-        forecast = channel['forecast']
+        forecast = item['forecast']
         forecastString = self.__transformForecast(forecast, units)
+        # print(forecastString)
+
+        self.__saveToFile(windString, atmosphereString, conditionString, forecastString)
+
+    def __saveToFile(self, wind, atmosphere, condition, forecast):
+        string = "weather:\n" + wind + atmosphere + condition + forecast
+        with open("weather_data.yml", "w") as weatherFile:
+            weatherFile.write(string)
 
     def __transformWind(self, wind, units):
         wind = Wind(wind, units)

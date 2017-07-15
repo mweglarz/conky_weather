@@ -1,0 +1,38 @@
+weather:
+ wind:
+  chill: 27
+  direction: 295
+  speed: 17
+ atmosphere:
+  humidity: 72
+  pressure: 989.0
+  rising: 0
+ condition:
+  code: 28
+  temp: 27
+  text: Mostly Cloudy
+ forecast:
+  day0:
+   code: 47
+   day: Sat
+   low: 23
+   high: 33
+   text: Scattered Thunderstorms
+  day1:
+   code: 30
+   day: Sun
+   low: 25
+   high: 30
+   text: Partly Cloudy
+  day2:
+   code: 28
+   day: Mon
+   low: 25
+   high: 30
+   text: Mostly Cloudy
+  day3:
+   code: 30
+   day: Tue
+   low: 24
+   high: 31
+   text: Partly Cloudy
