@@ -1,16 +1,16 @@
 weather:
  city: Krakow
  wind:
-  chill: 27
-  direction: 295
+  chill: 15
+  direction: 300
   speed: 17
  atmosphere:
-  humidity: 72
+  humidity: 59
   pressure: 989.0
   rising: 0
  condition:
-  code: 28
-  temp: 27
+  code: 27
+  temp: 15
   text: Mostly Cloudy
  forecast:
   day0:
@@ -36,4 +36,10 @@ weather:
    day: Tue
    low: 24
    high: 31
+   text: Partly Cloudy
+  day4:
+   code: 30
+   day: Wed
+   low: 25
+   high: 30
    text: Partly Cloudy

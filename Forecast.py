@@ -31,11 +31,13 @@ class Forecast:
         data1 = data[1]
         data2 = data[2]
         data3 = data[3]
+        data4 = data[4]
 
         self.day0 = ForecastDay(data0, units, 0)
         self.day1 = ForecastDay(data1, units, 1)
         self.day2 = ForecastDay(data2, units, 2)
         self.day3 = ForecastDay(data3, units, 3)
+        self.day4 = ForecastDay(data4, units, 4)
 
     def getString(self):
-        return " forecast:\n%s%s%s%s" % (self.day0.getString(), self.day1.getString(), self.day2.getString(), self.day3.getString())
+        return " forecast:\n%s%s%s%s%s" % (self.day0.getString(), self.day1.getString(), self.day2.getString(), self.day3.getString(), self.day4.getString())
