@@ -1,5 +1,0 @@
-weather:
-  url: https://weather-ydn-yql.media.yahoo.com/forecastrss
-  clientId: dj0yJmk9cFhOU0Y4M0d3VUJOJmQ9WVdrOWNFYzRUbXh4TkdNbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1lZQ--
-  clientSecret: c5e68b115bf726d4a59443166915e3a48eeb714b
-  oauthUrl: https://api.login.yahoo.com/oauth2/request_auth
