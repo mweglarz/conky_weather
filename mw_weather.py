@@ -10,7 +10,7 @@ from Condition import Condition
 from Forecast import Forecast
 
 # print(data['query']['results'])
-
+# ${color2}${hr}${color}
 class Weather:
 
     def __init__(self, woeid):
