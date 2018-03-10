@@ -79,6 +79,9 @@ class Weather:
 
 if __name__ == '__main__':
     # woeid = int(argv[1])
-    woeid = 502075
+    # Limanowa
+    woeid = 491746
+    # Krakow
+    # woeid = 502075
     weather = Weather(woeid)
     weather.getWeather()
